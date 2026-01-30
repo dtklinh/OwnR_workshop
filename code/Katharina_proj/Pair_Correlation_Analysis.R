@@ -27,11 +27,12 @@ CRC <- readRDS("./data/Katharina_proj/raw_data/CRC_677_seqs_tree_v2.rds")
 
 #tax_tab <- CRC %>% tax_table() %>% as.data.frame()
 
-# Species_lst <- c("Bacteroides fragilis", "Fusobacterium necrophorum", "Gemella morbillorum",
-#                  "Parvimonas micra", "Peptostreptococcus stomatis", "Prevotella intermedia",
-#                  "Solobacterium moorei", "Streptococcus gallolyticus", "Bifidobacterium pseudocatenulatum", "Lacticaseibacillus casei")
-Species_lst <- c("Fusobacterium nucleatum", "Gemella morbillorum", "Parvimonas micra", 
+Species_lst1 <- c("Bacteroides fragilis", "Fusobacterium necrophorum", "Gemella morbillorum",
+                 "Parvimonas micra", "Peptostreptococcus stomatis", "Prevotella intermedia",
+                 "Solobacterium moorei", "Streptococcus gallolyticus", "Bifidobacterium pseudocatenulatum", "Lacticaseibacillus casei")
+Species_lst2 <- c("Fusobacterium nucleatum", "Gemella morbillorum", "Parvimonas micra", 
                  "Prevotella intermedia", "Peptostreptococcus stomatis", "Solobacterium moorei")
+Species_lst <- union(Species_lst1, Species_lst2)
 taxa_lst <- name2taxid(Species_lst)
 
 ##CRC_wrench <- CRC %>% WrenchWrapper()
